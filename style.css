@@ -1,0 +1,277 @@
+:root{
+    /* colours */
+    --Nutmeg: hsl(14, 45%, 36%);
+    --DarkRaspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --RoseWhite: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --LightGrey: hsl(30, 18%, 87%);
+    --WengeBrown: hsl(30, 10%, 34%);
+    --DarkCharcoal: hsl(24, 5%, 18%);
+
+    /* sizes */
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-s: 0.875rem;
+    --size-base: 1rem;
+    --size-l: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+@font-face {
+    font-family: young;
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: outfit;
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+main{
+    width: 100%;
+    margin: auto;
+    line-height: 1.5;
+    font-family: outfit;
+}
+
+h1{
+    font-size: var(--size-5xl);
+    margin-bottom: 1rem;
+    font-family: young;
+}
+
+.nutmeg{
+    color: var(--Nutmeg);
+}
+
+.wengebrown{
+    color: var(--WengeBrown);
+}
+
+.over_all{
+    width: 100%;
+    background-color: var(--White);
+    margin: auto;
+}
+
+.omelette_img{
+    width: 100%;
+}
+
+.first_sect{
+    padding: 2rem;
+}
+
+.sect{
+    padding: 2rem 5rem;
+}
+
+.second_sect{
+    margin: auto 2.5rem;
+    background-color: var(--RoseWhite);
+    border-radius: 5px;
+}
+
+.second_sect li::marker{
+    color: var(--DarkRaspberry);
+}
+
+.fifth_sect h2{
+    margin-left: 0;
+}
+
+.fifth_sect{
+    margin: 0 -1rem;
+}
+
+h2, h3{
+    margin-left: -1rem;
+    padding-bottom: 1rem;
+}
+
+h2{
+    font-size: var(--size-4xl);
+    color: var(--Nutmeg);
+    font-family: young;
+}
+
+h3{
+    font-size: var(--size-2xl);
+    color: var(--DarkRaspberry);
+}
+
+p, li{
+    font-family: outfit;
+    font-size: var(--size-xl);
+    color: var(--WengeBrown);
+}
+
+li::marker{
+    color: var(--Nutmeg);
+    font-weight: 900;
+}
+
+hr{
+    margin: 0 2rem;
+    color: var(--WengeBrown);
+}
+
+table{
+    width: 100%;
+    font-size: var(--size-l);
+    font-weight: 900;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+table td{
+    padding: .5rem;
+    border-bottom: 1px solid var(--LightGrey);
+}
+
+table tr:last-child td{
+    border: 0;
+}
+
+/* xs */
+@media screen and (min-width: 475px) {
+    main{
+        max-width: 475px;
+    }
+
+    h1{
+        font-size: var(--size-6xl);
+    }
+
+    h2{
+        font-size: var(--size-5xl);
+    }
+    
+    h3{
+        font-size: var(--size-3xl);
+    }
+    
+    p, li{
+        font-size: var(--size-2xl);
+    }
+
+    table{
+        font-size: var(--size-xl);
+    }
+}
+
+/* s */
+@media screen and (min-width: 640px) {
+    html{
+        background-color: var(--Eggshell);
+    }
+
+    main{
+        max-width: 640px;
+    }
+
+    .over_all{
+        width: 70%;
+        margin: 7.5rem auto;
+        border-radius: 2rem;
+        padding: 4rem;
+    }
+
+    .omelette_img{
+        border-radius: 1rem;
+    }
+
+    h1{
+        font-size: var(--size-7xl);
+    }
+
+    h2{
+        font-size: var(--size-6xl);
+    }
+    
+    h3{
+        font-size: var(--size-4xl);
+    }
+    
+    p, li{
+        font-size: var(--size-3xl);
+    }
+
+    table{
+        font-size: var(--size-2xl);
+    }
+}
+
+/* m */
+@media screen and (min-width: 768px) {
+    main{
+        max-width: 768px;
+    }
+
+    .over_all{
+        width: 60%;
+    }
+}
+
+/* l */
+@media screen and (min-width: 1024px) {
+    main{
+        max-width: 1024px;
+    }
+
+    h1{
+        font-size: var(--size-8xl);
+    }
+
+    h2{
+        font-size: var(--size-7xl);
+    }
+    
+    h3{
+        font-size: var(--size-5xl);
+    }
+    
+    p, li{
+        font-size: var(--size-4xl);
+    }
+
+    table{
+        font-size: var(--size-3xl);
+    }
+}
+
+/* xl */
+@media screen and (min-width: 1280px) {
+    main{
+        max-width: 1280px;
+    }
+}
+
+/* xxl */
+@media screen and (min-width: 1536px) {
+    main{
+        max-width: 1536px;
+    }
+}
